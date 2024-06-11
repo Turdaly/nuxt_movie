@@ -1,0 +1,63 @@
+{
+  "PROJECTTITLE": "TINY MOVIEZ",
+  "header": {
+    "Movies": "Фильмы",
+    "TVShows": "ТВ Шоу",
+    "Anime": "Аниме",
+    "InputPlaceholder": "Поиск",
+    "Ru": "Рус",
+    "Eng": "Англ"
+  },
+  "sidebar": {
+    "Titles": {
+      "Menu": "Меню",
+      "Library": "Библиотека",
+      "General": "Общие"
+    },
+    "Menu": {
+      "Home": "Домой",
+      "Discover": "Узнать",
+      "Awards": "Награды",
+      "Profile": "Профиль"
+    },
+    "Library": {
+      "Recent": "Недавний",
+      "TopRated": "Топовый",
+      "Downloaded": "Загруженный",
+      "Playlist": "Плейлист",
+      "Watchlist": "Смотреть позже"
+    },
+    "General": {
+      "Settings": "Настройки",
+      "LogOut": "Выход"
+    }
+  },
+  "titles": {
+    "Continue": "Продолжить просмотр",
+    "Adventure": "Приключение",
+    "PopularMovies": "Популярные фильмы",
+    "ActorsAndCreators": "Актеры и создатели",
+    "AlsoWatching": "С фильмом {movie_name} смотрят",
+    "Reviews": "Отзывы"
+  },
+  "textButton": {
+    "Watchlist": "Смотреть позже",
+    "WatchNow": "Смотреть сейчас",
+    "Trailer": "Трейлер",
+    "Also": "Еще"
+  },
+  "input": {
+    "Placeholder": "Поиск"
+  },
+
+
+  "$vuetify": {
+    "input": {
+      "clear": "Очистить"
+    },
+    "carousel": {
+      "next": "Следующий",
+      "prev": "Предыдущий"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "PROJECTTITLE": "TINY MOVIEZ",
+  "header": {
+    "Movies": "Movies",
+    "TVShows": "TV Shows",
+    "Anime": "Anime",
+    "Ru": "Ru",
+    "Eng": "Eng"
+  },
+  "sidebar": {
+    "Titles": {
+      "Menu": "Menu",
+      "Library": "Library",
+      "General": "General"
+    },
+    "Menu": {
+      "Home": "Home",
+      "Discover": "Discover",
+      "Awards": "Awards",
+      "Profile": "Profile"
+    },
+    "Library": {
+      "Recent": "Recent",
+      "TopRated": "Top Rated",
+      "Downloaded": "Downloaded",
+      "Playlist": "Playlist",
+      "Watchlist": "Watchlist"
+    },
+    "General": {
+      "Settings": "Settings",
+      "LogOut": "Log Out"
+    }
+  },
+  "textButton": {
+    "Watchlist": "Watchlist",
+    "WatchNow": "Watch Now",
+    "Trailer": "Trailer",
+    "Also": "Also"
+  },
+  "titles": {
+    "Continue": "Continue",
+    "Adventure": "Adventure",
+    "PopularMovies": "Popular Movies",
+    "ActorsAndCreators": "Actors and creators",
+    "AlsoWatching": "They are watching the film {movie_name}",
+    "Reviews": "Reviews"
+  },
+  "input": {
+    "Placeholder": "Search"
+  },
+
+
+
+  "$vuetify": {
+    "input": {
+      "clear": "Clear"
+    },
+    "carousel": {
+      "next": "Next",
+      "prev": "Previous"
+    }
+  }
+}
