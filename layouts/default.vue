@@ -11,52 +11,62 @@
             </h1>
           </div>
           <div>
-            <h1 class="t-text-gray-400 t-mb-4">{{ $t('sidebar.Titles.Menu') }}</h1>
+            <h1 class="t-text-gray-400 t-mb-4">
+              {{ $t("sidebar.Titles.Menu") }}
+            </h1>
             <ul class="t-flex t-flex-col t-gap-3">
               <li>
-                <NuxtLink to="/">{{ $t('sidebar.Menu.Home') }} </NuxtLink>
+                <NuxtLink to="/">{{ $t("sidebar.Menu.Home") }} </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/">{{ $t('sidebar.Menu.Discover') }} </NuxtLink>
+                <NuxtLink to="/">{{ $t("sidebar.Menu.Discover") }} </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/">{{ $t('sidebar.Menu.Awards') }}</NuxtLink>
+                <NuxtLink to="/">{{ $t("sidebar.Menu.Awards") }}</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/">{{ $t('sidebar.Menu.Profile') }}</NuxtLink>
+                <NuxtLink to="/">{{ $t("sidebar.Menu.Profile") }}</NuxtLink>
               </li>
             </ul>
           </div>
           <div>
-            <h1 class="t-text-gray-400 t-mb-4">{{ $t('sidebar.Titles.Library') }}</h1>
+            <h1 class="t-text-gray-400 t-mb-4">
+              {{ $t("sidebar.Titles.Library") }}
+            </h1>
             <ul class="t-flex t-flex-col t-gap-3">
               <li>
-                <NuxtLink to="/">{{ $t('sidebar.Library.Recent') }}</NuxtLink>
+                <NuxtLink to="/">{{ $t("sidebar.Library.Recent") }}</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/">{{ $t('sidebar.Library.TopRated') }}</NuxtLink>
+                <NuxtLink to="/">{{ $t("sidebar.Library.TopRated") }}</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/">{{ $t('sidebar.Library.Playlist') }}</NuxtLink>
+                <NuxtLink to="/">{{ $t("sidebar.Library.Playlist") }}</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/">{{ $t('sidebar.Library.Downloaded') }}</NuxtLink>
+                <NuxtLink to="/">{{
+                  $t("sidebar.Library.Downloaded")
+                }}</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/">{{ $t('sidebar.Library.Watchlist') }}</NuxtLink>
+                <NuxtLink to="/">{{
+                  $t("sidebar.Library.Watchlist")
+                }}</NuxtLink>
               </li>
             </ul>
           </div>
         </div>
       </div>
       <div>
-        <h1 class="t-text-gray-400 t-mb-4">{{ $t('sidebar.Titles.General') }}</h1>
+        <h1 class="t-text-gray-400 t-mb-4">
+          {{ $t("sidebar.Titles.General") }}
+        </h1>
         <ul class="t-flex t-flex-col t-gap-3">
           <li>
-            <NuxtLink to="/">{{ $t('sidebar.General.Settings') }}</NuxtLink>
+            <NuxtLink to="/">{{ $t("sidebar.General.Settings") }}</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/">{{ $t('sidebar.General.LogOut') }}</NuxtLink>
+            <NuxtLink to="/">{{ $t("sidebar.General.LogOut") }}</NuxtLink>
           </li>
         </ul>
       </div>
@@ -66,13 +76,13 @@
         <nav>
           <ul class="t-flex t-p-4 t-gap-8 t-items-center t-justify-center">
             <li class="t-text-xl link">
-              <NuxtLink to="/movies">{{ $t('header.Movies') }}</NuxtLink>
+              <NuxtLink to="/movies">{{ $t("header.Movies") }}</NuxtLink>
             </li>
             <li class="t-text-xl link">
-              <NuxtLink to="/">{{ $t('header.TVShows') }}</NuxtLink>
+              <NuxtLink to="/tvshows">{{ $t("header.TVShows") }}</NuxtLink>
             </li>
             <li class="t-text-xl link">
-              <NuxtLink to="/">{{ $t('header.Anime') }}</NuxtLink>
+              <NuxtLink to="/animes">{{ $t("header.Animes") }}</NuxtLink>
             </li>
             <div>
               <v-text-field
@@ -85,11 +95,14 @@
                 bg-color="#21242D"
               ></v-text-field>
             </div>
-            <li class="t-text-xl">
-              <NuxtLink :to="switchLocalePath('ru')">{{ $t('header.Ru') }}</NuxtLink>
+            {{
+              $i18n.availableLocales
+            }}
+            <li class="t-text-xl t-cursor-pointer" @click="setLocale('ru')">
+              {{ $t("header.Ru") }}
             </li>
-            <li class="t-text-xl">
-              <NuxtLink :to="switchLocalePath('en')">{{ $t('header.Eng') }}</NuxtLink>
+            <li class="t-text-xl t-cursor-pointer" @click="setLocale('en')">
+              {{ $t("header.Eng") }}
             </li>
           </ul>
         </nav>
@@ -102,5 +115,11 @@
 </template>
 
 <script setup lang="ts">
-const switchLocalePath = useSwitchLocalePath()
+const { setLocale } = useI18n();
 </script>
+
+<style scoped>
+t-overflow-y-auto {
+  display: absolute;
+}
+</style>

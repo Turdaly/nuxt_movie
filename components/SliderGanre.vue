@@ -15,19 +15,14 @@
         <v-card
           :class="['ma-4', selectedClass]"
           color="#21242d"
-          rounded="xl"
-          height="150"
-          width="220"
+          rounded="lg"
+          height="110"
+          width="170"
           @click="toggle"
         >
           <div class="d-flex fill-height align-center justify-center">
             <v-scale-transition>
-              <v-icon
-                v-if="isSelected"
-                color="white"
-                icon="mdi-close-circle-outline"
-                size="48"
-              ></v-icon>
+              <Icon name="ri:emotion-sad-line" size="48" color="#b0afb2" />
             </v-scale-transition>
           </div>
         </v-card>

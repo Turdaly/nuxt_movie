@@ -14,9 +14,10 @@
           :key="n"
           v-slot="{ isSelected, toggle, selectedClass }"
         >
+        <NuxtLink to="/movies/1">
           <v-card
             :class="['ma-4', selectedClass]"
-            color="grey-lighten-1"
+            color="#21242d"
             rounded="xl"
             height="250"
             width="170"
@@ -33,6 +34,7 @@
               </v-scale-transition>
             </div>
           </v-card>
+        </NuxtLink>
         </v-slide-group-item>
       </v-slide-group>
     </v-sheet>

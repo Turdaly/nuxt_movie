@@ -1,5 +1,5 @@
 <template>
-  <div class="t-flex t-flex-col t-justify-between t-bg-custom-dark2 t-rounded-xl t-p-4 t-max-w-92 t-h-44">
+  <div class="t-flex t-flex-col t-justify-between t-bg-custom-dark2 t-rounded-xl t-p-4 t-max-w-92 t-h-44 hover:t-bg-[#2a2d35]">
     <div class="t-overflow-hidden">
       <p class="t-text-sm t-font-semibold t-mb-2">Профиль</p>
       <p class="t-font-semibold t-text-white t-line-clamp-3">

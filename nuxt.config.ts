@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false,
   devtools: { enabled: true },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
@@ -8,27 +9,26 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "vuetify-nuxt-module",
-    "@nuxtjs/i18n"
+    "@nuxtjs/i18n",
+    "nuxt-icon",
   ],
   i18n: {
     locales: [
       {
-        code: 'en',
-        iso: 'en-US',
-        name: 'English',
-        file: 'en.json'
+        code: "en",
+        iso: "en-US",
+        name: "English",
+        file: "en.json",
       },
       {
-        code: 'ru',
-        iso: 'ru-RUS',
-        name: 'Russion',
-        file: 'ru.json'
-      }
+        code: "ru",
+        iso: "ru-RU",
+        name: "Russian",
+        file: "ru.json",
+      },
     ],
-    lazy: true,
-    langDir: 'i18n/',
-    defaultLocale: 'en',
-    strategy: "prefix_except_default",
+    langDir: "./i18n/",
+    strategy: "no_prefix",
   },
   // tailwindcss: {
   //   exposeConfig: true,

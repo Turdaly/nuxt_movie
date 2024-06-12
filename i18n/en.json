@@ -3,7 +3,7 @@
   "header": {
     "Movies": "Movies",
     "TVShows": "TV Shows",
-    "Anime": "Anime",
+    "Animes": "Animes",
     "Ru": "Ru",
     "Eng": "Eng"
   },
@@ -42,15 +42,29 @@
     "Adventure": "Adventure",
     "PopularMovies": "Popular Movies",
     "ActorsAndCreators": "Actors and creators",
-    "AlsoWatching": "They are watching the film {movie_name}",
-    "Reviews": "Reviews"
+    "AlsoWatchingMovie": "They are watching the film {movie_name}",
+    "Movie_Premieres": "Movie premieres",
+    "The_best_movies": "The best films",
+    "Reviews": "Reviews",
+    "Ganres": "Ganres",
+
+    "PopularAnimes": "Popular animes",
+    "AlsoWatchingAnime": "They are watching the animes {anime_name}",
+    "Anime_Premieres": "Anime premieres",
+    "The_best_anime": "The best animes"
   },
   "input": {
     "Placeholder": "Search"
   },
-
-
-
+  "filters": {
+    "Countries": "Countries",
+    "Years": "Years",
+    "Rate": "Rate"
+  },
+  "tabs": {
+    "Entertainment": "Entertainment",
+    "Childish": "Childish"
+  },
   "$vuetify": {
     "input": {
       "clear": "Clear"

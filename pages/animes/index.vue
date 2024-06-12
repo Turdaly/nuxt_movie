@@ -14,7 +14,7 @@
         </v-breadcrumbs>
       </div>
       <div>
-        <h1 class="t-text-4xl t-font-bold">{{ $t("header.Movies") }}</h1>
+        <h1 class="t-text-4xl t-font-bold">{{ $t("header.Animes") }}</h1>
       </div>
       <div class="t-w-full t-bg-custom-dark2 t-h-48 t-p-4">
         <div class="t-flex t-gap-4">
@@ -79,7 +79,7 @@
       <div>
         <NuxtLink to="">
           <h2 class="t-text-2xl t-font-bold">
-            {{ $t('titles.Movie_Premieres') }}
+            {{ $t('titles.Anime_Premieres') }}
             <v-icon
               icon="mdi-chevron-right"
               size="28"
@@ -98,7 +98,7 @@
       <div>
         <NuxtLink to="">
           <h2 class="t-text-2xl t-font-bold">
-            {{ $t('titles.The_best_movies') }}
+            {{ $t('titles.Animes') }}
             <v-icon
               icon="mdi-chevron-right"
               size="28"
@@ -113,11 +113,12 @@
     </div>
   </section>
 </template>
+
 <script setup lang="ts">
 const { t } = useI18n()
 
 const items = [
   {title: () => t('sidebar.Menu.Home')},
-  { title: (() => t("header.Movies")) },
+  { title: (() => t("header.Animes")) },
 ]
 </script>

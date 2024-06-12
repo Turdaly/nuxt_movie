@@ -9,6 +9,14 @@
 <script lang="ts" setup>
 const colorMode = useColorMode();
 colorMode.preference = "dark";
+useHead({
+  link: [
+    {
+      rel: 'stylesheet',
+      href: 'https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css',
+    },
+  ]
+})
 </script>
 
 <style>

@@ -3,7 +3,7 @@
   "header": {
     "Movies": "Фильмы",
     "TVShows": "ТВ Шоу",
-    "Anime": "Аниме",
+    "Animes": "Аниме",
     "InputPlaceholder": "Поиск",
     "Ru": "Рус",
     "Eng": "Англ"
@@ -37,8 +37,16 @@
     "Adventure": "Приключение",
     "PopularMovies": "Популярные фильмы",
     "ActorsAndCreators": "Актеры и создатели",
-    "AlsoWatching": "С фильмом {movie_name} смотрят",
-    "Reviews": "Отзывы"
+    "AlsoWatchingMovie": "С фильмом {movie_name} смотрят",
+    "Movie_Premieres": "Премьеры фильмов",
+    "The_best_movies": "Лучшие фильмы",
+    "Reviews": "Отзывы",
+    "Ganres": "Жанры",
+
+    "PopularAnimes": "Популярные аниме",
+    "AlsoWatchingAnime": "С анимем {anime_name} смотрят",
+    "Anime_Premieres": "Премьеры аниме",
+    "The_best_anime": "Лучшие аниме"
   },
   "textButton": {
     "Watchlist": "Смотреть позже",
@@ -49,8 +57,15 @@
   "input": {
     "Placeholder": "Поиск"
   },
-
-
+  "filters": {
+    "Countries": "Страны",
+    "Years": "Годы",
+    "Rate": "Рейтинг"
+  },
+  "tabs": {
+    "Entertainment": "Развлекательные",
+    "Childish": "Детские"
+  },
   "$vuetify": {
     "input": {
       "clear": "Очистить"
