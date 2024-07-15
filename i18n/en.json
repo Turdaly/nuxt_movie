@@ -65,6 +65,27 @@
     "Entertainment": "Entertainment",
     "Childish": "Childish"
   },
+  "ganre": {
+    "Fighters":"Fighters",
+    "Westerns":"Westerns",
+    "Military":"Military",
+    "Detectives":"Detectives",
+    "Children's":"Children's",
+    "Documents":"Documents",
+    "Dramas":"Dramas",
+    "Historical":"Historical",
+    "Comedies":"Comedies",
+    "Crime":"Crime",
+    "Melodramas":"Melodramas",
+    "Cartoons":"Cartoons",
+    "Adventures":"Adventures",
+    "Family":"Family",
+    "Sports":"Sports",
+    "Thrillers":"Thrillers",
+    "Horror":"Horror",
+    "Fiction":"Fiction",
+    "Fantasy":"Fantasy"
+  },
   "$vuetify": {
     "input": {
       "clear": "Clear"

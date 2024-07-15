@@ -66,6 +66,27 @@
     "Entertainment": "Развлекательные",
     "Childish": "Детские"
   },
+  "ganre": {
+    "Fighters":"Боевики",
+    "Westerns":"Вестерны",
+    "Military":"Военные",
+    "Detectives":"Детективы",
+    "Children's":"Детские",
+    "Documents":"Документы",
+    "Dramas":"Драмы",
+    "Historical":"Исторические",
+    "Comedies":"Комедии",
+    "Crime":"Криминал",
+    "Melodramas":"Мелодрамы",
+    "Cartoons":"Мультфильмы",
+    "Adventures":"Приключения",
+    "Family":"Семейные",
+    "Sports":"Спортивные",
+    "Thrillers":"Триллеры",
+    "Horror":"Ужасы",
+    "Fiction":"Фантастика",
+    "Fantasy":"Фэнтези"
+  },
   "$vuetify": {
     "input": {
       "clear": "Очистить"

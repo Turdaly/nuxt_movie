@@ -1,6 +1,18 @@
 <template>
   <section>
     <div class="">
+      <div class="">
+        <v-breadcrumbs :items="(items as any)" bg-color="#21242d">
+          <template v-slot:title="{ item }">
+            <NuxtLink to="/movies"
+              ><h2 class="t-text-white">
+                <!-- @vue-ignore -->
+                {{ (item.title as any)() }}
+              </h2></NuxtLink
+            >
+          </template>
+        </v-breadcrumbs>
+      </div>
       <div class="t-flex t-gap-10">
         <div class="t-min-w-[650px] t-w-full">
           <img src="public/images/Стражи.jpg" alt="" />
@@ -10,6 +22,7 @@
             <h1 class="t-max-w-[400px] t-text-6xl t-truncate">Movie name</h1>
           </div>
           <div>
+            <p>{{ $route.params }}</p>
             <p>2021 2ч 11 мин 16+</p>
             <ul class="t-flex t-gap-2">
               <li>Сша</li>
@@ -77,6 +90,23 @@
 </template>
 
 <script lang="ts" setup>
+const { t } = useI18n();
+const route = useRoute();
+
+const items = [
+  { title: () => t("header.Movies") },
+  { title: () => t("ganre.Fiction") },
+];
+
+const onInit = async () => {
+  if (typeof route.params.id !== "string" || /^\d+$/.test(route.params.id) === false)
+    navigateTo({ name: "movies" });
+};
+
+
+
+onInit();
+
 // const route = useRoute()
 // const { data } = await useFetch(`/api/movies/${route.params.slug}`)
 // if (!data.value) {
