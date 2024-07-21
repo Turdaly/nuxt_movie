@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="t-flex t-flex-col t-gap-6">
-      <div class="">
+      <div class="t-hidden lg:t-block">
         <!-- @vue-ignore -->
         <v-breadcrumbs :items="items" bg-color="#21242d">
           <template v-slot:title="{ item }">
@@ -14,7 +14,7 @@
           </template>
         </v-breadcrumbs>
       </div>
-      <div>
+      <div class="t-mt-6 lg:t-mt-0">
         <h1 class="t-text-4xl t-font-bold">{{ t("header.TVShows") }}</h1>
       </div>
       <div>

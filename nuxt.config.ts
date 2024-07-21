@@ -11,17 +11,24 @@ export default defineNuxtConfig({
     "vuetify-nuxt-module",
     "@nuxtjs/i18n",
     "nuxt-icon",
+    "@pinia/nuxt",
   ],
+  plugins: ["~/plugins/axios.ts"],
+  runtimeConfig: {
+    public: {
+      imageBaseURL: "https://image.tmdb.org/t/p/w500",
+    },
+  },
   i18n: {
     locales: [
       {
-        code: "en",
+        code: "en-Us",
         iso: "en-US",
         name: "English",
         file: "en.json",
       },
       {
-        code: "ru",
+        code: "ru-Ru",
         iso: "ru-RU",
         name: "Russian",
         file: "ru.json",
@@ -30,8 +37,4 @@ export default defineNuxtConfig({
     langDir: "./i18n/",
     strategy: "no_prefix",
   },
-  // tailwindcss: {
-  //   exposeConfig: true,
-  //   viewer: true,
-  // },
 });

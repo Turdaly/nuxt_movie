@@ -7,6 +7,11 @@
     "Ru": "Ru",
     "Eng": "Eng"
   },
+  "footer": {
+    "Catalog": "Catalog",
+    "Search": "Search",
+    "Account": "Account"
+  },
   "sidebar": {
     "Titles": {
       "Menu": "Menu",
@@ -22,7 +27,7 @@
     "Library": {
       "Recent": "Recent",
       "TopRated": "Top Rated",
-      "Downloaded": "Downloaded",
+      "Favorite": "Favorite",
       "Playlist": "Playlist",
       "Watchlist": "Watchlist"
     },
@@ -32,6 +37,7 @@
     }
   },
   "textButton": {
+    "WatchAll": "Wathch all",
     "Watchlist": "Watchlist",
     "WatchNow": "Watch Now",
     "Trailer": "Trailer",
@@ -39,7 +45,7 @@
   },
   "titles": {
     "Continue": "Continue",
-    "Adventure": "Adventure",
+    "Upcoming": "Upcoming",
     "PopularMovies": "Popular Movies",
     "ActorsAndCreators": "Actors and creators",
     "AlsoWatchingMovie": "They are watching the film {movie_name}",
@@ -47,6 +53,7 @@
     "The_best_movies": "The best films",
     "Reviews": "Reviews",
     "Ganres": "Ganres",
+    "Interested":"You might be interested in",
 
     "PopularAnimes": "Popular animes",
     "AlsoWatchingAnime": "They are watching the animes {anime_name}",

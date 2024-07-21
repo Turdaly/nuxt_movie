@@ -8,6 +8,11 @@
     "Ru": "Рус",
     "Eng": "Англ"
   },
+  "footer": {
+    "Catalog": "Каталог",
+    "Search": "Поиск",
+    "Account": "Аккаунт"
+  },
   "sidebar": {
     "Titles": {
       "Menu": "Меню",
@@ -23,7 +28,7 @@
     "Library": {
       "Recent": "Недавний",
       "TopRated": "Топовый",
-      "Downloaded": "Загруженный",
+      "Favorite": "Избранный",
       "Playlist": "Плейлист",
       "Watchlist": "Смотреть позже"
     },
@@ -34,7 +39,7 @@
   },
   "titles": {
     "Continue": "Продолжить просмотр",
-    "Adventure": "Приключение",
+    "Upcoming": "Выходящий",
     "PopularMovies": "Популярные фильмы",
     "ActorsAndCreators": "Актеры и создатели",
     "AlsoWatchingMovie": "С фильмом {movie_name} смотрят",
@@ -42,6 +47,7 @@
     "The_best_movies": "Лучшие фильмы",
     "Reviews": "Отзывы",
     "Ganres": "Жанры",
+    "Interested":"Возможно, тебя заинтересует",
 
     "PopularAnimes": "Популярные аниме",
     "AlsoWatchingAnime": "С анимем {anime_name} смотрят",
@@ -49,6 +55,7 @@
     "The_best_anime": "Лучшие аниме"
   },
   "textButton": {
+    "WatchAll": "Посмотреть все",
     "Watchlist": "Смотреть позже",
     "WatchNow": "Смотреть сейчас",
     "Trailer": "Трейлер",

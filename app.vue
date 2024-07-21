@@ -18,6 +18,7 @@ useHead({
     },
   ]
 })
+
 </script>
 
 <style>
@@ -25,9 +26,18 @@ useHead({
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .custom-scrollbar {
+    scrollbar-color: #00B9AE #21242D; /* түстерді өзгерту */
+    scrollbar-width: thin;
+  }
+
+
+
+}
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.4s;
+  transition: all 0.3s;
 }
 .page-enter-from,
 .page-leave-to {
@@ -54,4 +64,6 @@ h3 {
 p {
   @apply t-text-gray-400;
 }
+
+
 </style>

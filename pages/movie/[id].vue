@@ -1,32 +1,43 @@
 <template>
   <section>
-    <div class="">
+    <div v-if="moviesStore.detailMovie">
       <div class="">
         <v-breadcrumbs :items="(items as any)" bg-color="#21242d">
           <template v-slot:title="{ item }">
             <NuxtLink to="/movies"
               ><h2 class="t-text-white">
                 <!-- @vue-ignore -->
-                {{ (item.title as any)() }}
+                {{ item.title }}
               </h2></NuxtLink
             >
           </template>
         </v-breadcrumbs>
       </div>
-      <div class="t-flex t-gap-10">
-        <div class="t-min-w-[650px] t-w-full">
-          <img src="public/images/Стражи.jpg" alt="" />
+
+      <div class="t-flex t-gap-10 t-flex-col lg:t-flex-row t-mt-6">
+        <div class="t-w-full">
+          <img :src="`${imageBaseUrl}${moviesStore.detailMovie.backdrop_path}`" alt="" />
         </div>
         <div class="t-flex t-flex-col t-gap-8">
           <div>
-            <h1 class="t-max-w-[400px] t-text-6xl t-truncate">Movie name</h1>
+            <h1 class="t-text-6xl t-truncate t-text-wrap">
+              {{ moviesStore.detailMovie.title }}
+            </h1>
           </div>
           <div>
-            <p>{{ $route.params }}</p>
-            <p>2021 2ч 11 мин 16+</p>
-            <ul class="t-flex t-gap-2">
-              <li>Сша</li>
-              <li>Фантастика</li>
+            <p>
+              {{ moviesStore.detailMovie.release_date.slice(0, 4) }}
+              {{ moviesStore.detailMovie.runtime }} мин 16+
+            </p>
+            <p class="t-flex">
+              {{ moviesStore.detailMovie.production_countries[0].iso_3166_1 }}
+            </p>
+            <ul
+              v-for="genres in moviesStore.detailMovie.genres"
+              :key="genres.id"
+              class="t-flex t-gap-2"
+            >
+              <li>{{ genres.name }}</li>
             </ul>
           </div>
           <div class="t-flex t-items-center t-gap-8">
@@ -37,52 +48,64 @@
               <v-btn rounded="lg" color="#21242D" height="48" width="305">
                 {{ $t("textButton.Trailer") }}
               </v-btn>
-              <v-btn icon="mdi-bookmark-outline" rounded="lg" color="#21242D">
+              <v-btn
+                icon="mdi-bookmark-outline"
+                rounded="lg"
+                color="#21242D"
+                @click="
+                  moviesStore.addFavoriteMovie(
+                    21383668,
+                    parseInt($route.params.id.toString())
+                  )
+                "
+              >
               </v-btn>
               <v-btn icon="mdi-share-outline" rounded="lg" color="#21242D">
               </v-btn>
             </div>
             <div class="t-mt-3">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
-                dignissimos incidunt? Modi soluta incidunt ut mollitia minus
-                molestiae. Culpa ex itaque facilis natus facere voluptate
-                provident? Harum cumque laboriosam illum?
+                {{ moviesStore.detailMovie.overview }}
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div>
-        <h1 class="t-text-2xl t-font-bold">
-          {{ $t("titles.AlsoWatchingMovie") }}
-        </h1>
-        <Slider />
-      </div>
-      <div>
-        <h1 class="t-text-2xl t-font-bold t-mb-6">
-          {{ $t("titles.ActorsAndCreators") }}
-        </h1>
-        <div class="t-flex t-gap-6">
-          <div v-for="n in 9" class="t-size-48">
-            <Actor />
-          </div>
-          <v-btn
-            size="90"
-            rounded="pill"
-            color="#21242D"
-            class="text-capitalize"
+      <div class="t-flex t-flex-col t-gap-12">
+        <div class="t-mt-10">
+          <h1 class="t-text-2xl t-font-bold">
+            {{ $t("titles.AlsoWatchingMovie") }}
+          </h1>
+          <Slider
+            class="t-overflow-x-auto custom-scrollbar"
+            :moviesList="moviesStore?.recommendedMovies"
+          />
+        </div>
+        <div>
+          <h1 class="t-text-2xl t-font-bold t-mb-6">
+            {{ $t("titles.ActorsAndCreators") }}
+          </h1>
+          <div
+            class="t-flex t-gap-6 t-mb-12 t-overflow-x-auto custom-scrollbar"
           >
-            {{ $t("textButton.Also") }}
-          </v-btn>
+            <div v-for="n in 9" class="">
+              <Actor />
+            </div>
+            <v-btn
+              size="90"
+              rounded="pill"
+              color="#21242D"
+              class="text-capitalize"
+            >
+              {{ $t("textButton.Also") }}
+            </v-btn>
+          </div>
         </div>
       </div>
       <h1 class="t-text-2xl t-font-bold t-mb-4">{{ $t("titles.Reviews") }}</h1>
-      <div class="t-flex t-gap-10">
-        <div v-for="n in 3">
-          <NuxtLink to="">
-            <Review />
-          </NuxtLink>
+      <div class="">
+        <div>
+          <Review/>
         </div>
       </div>
     </div>
@@ -90,29 +113,30 @@
 </template>
 
 <script lang="ts" setup>
+import { useMoviesStore } from "~/stores/movies";
+const moviesStore = useMoviesStore();
 const { t } = useI18n();
 const route = useRoute();
 
-const items = [
-  { title: () => t("header.Movies") },
-  { title: () => t("ganre.Fiction") },
-];
+const items = [{ title: t("header.Movies") }, { title: t("ganre.Fiction") }];
+const {
+  public: { imageBaseUrl },
+} = useRuntimeConfig();
 
 const onInit = async () => {
-  if (typeof route.params.id !== "string" || /^\d+$/.test(route.params.id) === false)
+  if (
+    typeof route.params.id !== "string" ||
+    /^\d+$/.test(route.params.id) === false
+  )
     navigateTo({ name: "movies" });
 };
-
-
-
-onInit();
-
-// const route = useRoute()
-// const { data } = await useFetch(`/api/movies/${route.params.slug}`)
-// if (!data.value) {
-//   throw createError({
-//     statusCode: 404,
-//     statusMessage: 'Page Not Found'
-//   })
-// }
+onMounted(async () => {
+  onInit();
+  await Promise.allSettled([
+    moviesStore.fetchDetailMovie(),
+    moviesStore.fetchRecommendedMovies(),
+    moviesStore.fetchReviewsMovie(),
+  ]);
+  console.log('asdasd', moviesStore.detailMovie)
+});
 </script>

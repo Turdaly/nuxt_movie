@@ -1,7 +1,18 @@
 <template>
   <section>
     <div class="t-flex t-flex-col t-gap-6">
-      <div class="">
+      <div class="t-flex t-gap-4 t-bg-custom-dark2 t-p-4 lg:t-hidden t-font-medium">
+        <NuxtLink :to="{ name: 'movies'}">
+          <h3 class="t-text-custom-teal">{{ $t("header.Movies") }}</h3>
+        </NuxtLink>
+        <NuxtLink :to="{ name: 'tvshows'}">
+          <h3>{{ $t("header.TVShows") }}</h3>
+        </NuxtLink>
+        <NuxtLink :to="{ name: 'animes'}">
+          <h3>{{ $t("header.Animes") }}</h3>
+        </NuxtLink>
+      </div>
+      <div class="t-hidden lg:t-block">
         <v-breadcrumbs :items="(items as any)" bg-color="#21242d">
           <template v-slot:title="{ item }">
             <NuxtLink to="/"
@@ -16,8 +27,8 @@
       <div>
         <h1 class="t-text-4xl t-font-bold">{{ $t("header.Movies") }}</h1>
       </div>
-      <div class="t-w-full t-bg-custom-dark2 t-h-48 t-p-4">
-        <div class="t-flex t-gap-4">
+      <div class="t-bg-custom-dark2  t-p-4">
+        <div class="t-flex t-gap-4 t-justify-between t-flex-col md:t-flex-row">
           <v-select
             :label="$t('titles.Ganres')"
             :items="[
@@ -32,7 +43,7 @@
             variant="solo-filled"
             bg-color="#21242D"
             item-color="#21242D"
-            class="t-truncate t-max-w-[263px] t-max-h-[56px]"
+            class="t-truncate t-min-w-full md:t-min-w-0"
           ></v-select>
           <v-select
             :label="$t('filters.Countries')"
@@ -48,7 +59,7 @@
             variant="solo-filled"
             bg-color="#21242D"
             item-color="#21242D"
-            class="t-truncate t-max-w-[263px] t-max-h-[56px]"
+            class="t-truncate t-min-w-full md:t-min-w-0"
           ></v-select>
           <v-select
             :label="$t('filters.Years')"
@@ -64,6 +75,7 @@
             variant="solo-filled"
             bg-color="#21242D"
             item-color="#21242D"
+            class="t-truncate t-min-w-full md:t-min-w-0"
           >
           </v-select>
           <v-select
@@ -79,10 +91,11 @@
             multiple
             variant="solo-filled"
             bg-color="#21242D"
+            class="t-truncate t-min-w-full md:t-min-w-0"
           ></v-select>
         </div>
       </div>
-      <div>
+      <div class="">
         <NuxtLink to="">
           <h2 class="t-text-2xl t-font-bold">
             {{ $t('titles.Movie_Premieres') }}
@@ -93,15 +106,18 @@
             ></v-icon>
           </h2>
         </NuxtLink>
-        <NuxtLink to="">
-          <Slider />
-        </NuxtLink>
+        <div class="t-overflow-x-auto custom-scrollbar">
+          <NuxtLink to="">
+            <Slider />
+          </NuxtLink>
+
+        </div>
       </div>
       <div>
         <h2 class="t-text-2xl t-font-bold">{{ $t('titles.Ganres') }}</h2>
         <SliderGanre />
       </div>
-      <div>
+      <div class="t-overflow-x-auto custom-scrollbar">
         <NuxtLink to="">
           <h2 class="t-text-2xl t-font-bold">
             {{ $t('titles.The_best_movies') }}
@@ -112,9 +128,11 @@
             ></v-icon>
           </h2>
         </NuxtLink>
-        <NuxtLink to="">
-          <Slider />
-        </NuxtLink>
+        <div class="t-overflow-x-auto custom-scrollbar">
+          <NuxtLink to="">
+            <Slider />
+          </NuxtLink>
+        </div>
       </div>
     </div>
   </section>
