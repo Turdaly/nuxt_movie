@@ -56,7 +56,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { IMoviesList } from "~/types/movie";
+import type { IMoviesList } from "~/types";
 import { useMoviesStore } from '~/stores/movies'
 const movieStore = useMoviesStore()
 

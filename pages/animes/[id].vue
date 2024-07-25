@@ -44,7 +44,7 @@
         <h1 class="t-text-2xl t-font-bold">
           {{ $t("titles.AlsoWatchingMovie") }}
         </h1>
-        <Slider />
+        <!-- <Slider /> -->
       </div>
       <div>
         <h1 class="t-text-2xl t-font-bold t-mb-6">

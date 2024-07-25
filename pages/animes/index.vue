@@ -1,6 +1,7 @@
 <template>
   <section>
     <div class="t-flex t-flex-col t-gap-6">
+      
       <div
         class="t-flex t-gap-4 t-bg-custom-dark2 t-p-4 lg:t-hidden t-font-medium"
       >
@@ -110,7 +111,7 @@
         </NuxtLink>
         <div class="t-overflow-x-auto custom-scrollbar">
           <NuxtLink to="">
-            <Slider />
+            <!-- <Slider /> -->
           </NuxtLink>
         </div>
       </div>
@@ -131,7 +132,7 @@
         </NuxtLink>
         <div class="t-overflow-x-auto custom-scrollbar">
           <NuxtLink to="">
-            <Slider />
+            <!-- <Slider /> -->
           </NuxtLink>
         </div>
       </div>

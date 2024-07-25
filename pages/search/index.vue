@@ -4,7 +4,7 @@
       <div>
         <h1 class="t-text-4xl t-font-bold">{{ $t("input.Placeholder") }}</h1>
       </div>
-      <div>
+      <div class=" lg:t-hidden">
         <v-text-field
           class="t-mt-6 t-max-w-[830px]"
           rounded-shaped
@@ -26,7 +26,7 @@
         ></v-text-field>
       </div>
       <div class="t-mt-12 t-mb-12">
-        <h3 class="t-text-xl t-font-medium">{{ $t("titles.Interested") }}</h3>
+        <!-- <h3 class="t-text-xl t-font-medium">{{ $t("titles.Interested") }}</h3> -->
         <div class="t-flex t-flex-wrap t-gap-6 t-mt-6">
           <div
             v-for="movie in moviesStore.searchMovies?.results"
@@ -54,9 +54,6 @@
 import { useMoviesStore } from "~/stores/movies";
 const moviesStore = useMoviesStore();
 const route = useRoute();
-definePageMeta({
-  layout: false,
-});
 
 const {
   public: { imageBaseURL },
@@ -65,6 +62,8 @@ const {
 const refreshPage = () => {
   window.location.reload();
 };
+
+
 
 onMounted(async () => {
   if (route.query.s) {

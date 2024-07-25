@@ -6,7 +6,6 @@
           <template v-slot:title="{ item }">
             <NuxtLink to="/movies"
               ><h2 class="t-text-white">
-                <!-- @vue-ignore -->
                 {{ item.title }}
               </h2></NuxtLink
             >
@@ -15,29 +14,34 @@
       </div>
 
       <div class="t-flex t-gap-10 t-flex-col lg:t-flex-row t-mt-6">
-        <div class="t-w-full">
-          <img :src="`${imageBaseUrl}${moviesStore.detailMovie.backdrop_path}`" alt="" />
-        </div>
-        <div class="t-flex t-flex-col t-gap-8">
+        <iframe
+          class="t-w-full t-min-h-[400px]"
+          :src="`${videoBaseURL}/${moviesStore.trailerLink}`"
+        >
+        </iframe>
+        <div class="t-flex t-flex-col t-gap-8 t-w-[441px] md:t-w-full">
           <div>
-            <h1 class="t-text-6xl t-truncate t-text-wrap">
+            <h1 class="t-text-6xl t-truncate t-text-wrap t-text-center">
               {{ moviesStore.detailMovie.title }}
             </h1>
           </div>
-          <div>
-            <p>
-              {{ moviesStore.detailMovie.release_date.slice(0, 4) }}
-              {{ moviesStore.detailMovie.runtime }} мин 16+
-            </p>
-            <p class="t-flex">
-              {{ moviesStore.detailMovie.production_countries[0].iso_3166_1 }}
-            </p>
-            <ul
-              v-for="genres in moviesStore.detailMovie.genres"
-              :key="genres.id"
-              class="t-flex t-gap-2"
-            >
-              <li>{{ genres.name }}</li>
+          <div class="t-flex t-flex-col t-items-center t-font-medium">
+            <ul class="t-flex t-gap-3">
+              <li>
+                {{ moviesStore.detailMovie.release_date.slice(0, 4) }}
+              </li>
+              <li>
+                {{ moviesStore.detailMovie.runtime }} мин
+              </li>
+            </ul>
+            <ul class="t-flex t-items-center t-gap-6">
+              <li>{{ moviesStore.detailMovie.production_countries[0].name}}</li>
+              <li
+                v-for="genres in moviesStore.detailMovie.genres"
+                :key="genres.id"
+              >
+                {{ genres.name }}
+              </li>
             </ul>
           </div>
           <div class="t-flex t-items-center t-gap-8">
@@ -88,7 +92,7 @@
           <div
             class="t-flex t-gap-6 t-mb-12 t-overflow-x-auto custom-scrollbar"
           >
-            <div v-for="n in 9" class="">
+            <div v-for="n in 9" class="t-mb-6">
               <Actor />
             </div>
             <v-btn
@@ -105,7 +109,7 @@
       <h1 class="t-text-2xl t-font-bold t-mb-4">{{ $t("titles.Reviews") }}</h1>
       <div class="">
         <div>
-          <Review/>
+          <Review />
         </div>
       </div>
     </div>
@@ -120,7 +124,7 @@ const route = useRoute();
 
 const items = [{ title: t("header.Movies") }, { title: t("ganre.Fiction") }];
 const {
-  public: { imageBaseUrl },
+  public: { videoBaseURL },
 } = useRuntimeConfig();
 
 const onInit = async () => {
@@ -136,7 +140,7 @@ onMounted(async () => {
     moviesStore.fetchDetailMovie(),
     moviesStore.fetchRecommendedMovies(),
     moviesStore.fetchReviewsMovie(),
+    moviesStore.fetchVideosMovie()
   ]);
-  console.log('asdasd', moviesStore.detailMovie)
 });
 </script>

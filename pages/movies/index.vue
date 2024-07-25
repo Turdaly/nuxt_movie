@@ -108,7 +108,7 @@
         </NuxtLink>
         <div class="t-overflow-x-auto custom-scrollbar">
           <NuxtLink to="">
-            <Slider />
+            <!-- <Slider /> -->
           </NuxtLink>
 
         </div>
@@ -130,7 +130,7 @@
         </NuxtLink>
         <div class="t-overflow-x-auto custom-scrollbar">
           <NuxtLink to="">
-            <Slider />
+            <!-- <Slider /> -->
           </NuxtLink>
         </div>
       </div>

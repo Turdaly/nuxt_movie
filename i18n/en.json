@@ -29,7 +29,8 @@
       "TopRated": "Top Rated",
       "Favorite": "Favorite",
       "Playlist": "Playlist",
-      "Watchlist": "Watchlist"
+      "Watchlist": "Watchlist",
+      "MyMovies": "My movies"
     },
     "General": {
       "Settings": "Settings",
@@ -41,6 +42,7 @@
     "Watchlist": "Watchlist",
     "WatchNow": "Watch Now",
     "Trailer": "Trailer",
+    "AddMovie": "Add movie",
     "Also": "Also"
   },
   "titles": {
@@ -72,7 +74,7 @@
     "Entertainment": "Entertainment",
     "Childish": "Childish"
   },
-  "ganre": {
+  "ganres": {
     "Fighters":"Fighters",
     "Westerns":"Westerns",
     "Military":"Military",
@@ -92,6 +94,15 @@
     "Horror":"Horror",
     "Fiction":"Fiction",
     "Fantasy":"Fantasy"
+  },
+  "form": {
+    "Title": "Title",
+    "Adult": "Adult",
+    "Genres": "Genres",
+    "Overview": "A brief description of the film",
+    "Poster_path": "Image url",
+    "ReleaseDate": "Release date",
+    "Duration": "Duration"
   },
   "$vuetify": {
     "input": {

@@ -17,4 +17,5 @@ export default defineNuxtPlugin((nuxtApp) => {
     },
   })
   nuxtApp.provide("apiMovie", apiMovie);
+  nuxtApp.provide("apiCustom", apiCustom);
 });

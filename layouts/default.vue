@@ -49,8 +49,8 @@
                 }}</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/">{{
-                  $t("sidebar.Library.Watchlist")
+                <NuxtLink :to="{ name: 'myMovies' }">{{
+                  $t("sidebar.Library.MyMovies")
                 }}</NuxtLink>
               </li>
             </ul>

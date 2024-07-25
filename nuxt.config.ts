@@ -13,10 +13,11 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@pinia/nuxt",
   ],
-  plugins: ["~/plugins/axios.ts"],
+  plugins: ["~/plugins/axios.ts", ],
   runtimeConfig: {
     public: {
       imageBaseURL: "https://image.tmdb.org/t/p/w500",
+      videoBaseURL: "https://www.youtube.com/embed"
     },
   },
   i18n: {

@@ -28,9 +28,11 @@
     "Library": {
       "Recent": "Недавний",
       "TopRated": "Топовый",
-      "Favorite": "Избранный",
+      "Favorite": "Избранное",
       "Playlist": "Плейлист",
-      "Watchlist": "Смотреть позже"
+      "Watchlist": "Смотреть позже",
+      "MyMovies": "Мои фильмы"
+
     },
     "General": {
       "Settings": "Настройки",
@@ -59,6 +61,7 @@
     "Watchlist": "Смотреть позже",
     "WatchNow": "Смотреть сейчас",
     "Trailer": "Трейлер",
+    "AddMovie": "Добавить фильм",
     "Also": "Еще"
   },
   "input": {
@@ -73,7 +76,7 @@
     "Entertainment": "Развлекательные",
     "Childish": "Детские"
   },
-  "ganre": {
+  "ganres": {
     "Fighters":"Боевики",
     "Westerns":"Вестерны",
     "Military":"Военные",
@@ -93,6 +96,15 @@
     "Horror":"Ужасы",
     "Fiction":"Фантастика",
     "Fantasy":"Фэнтези"
+  },
+  "form": {
+    "Title": "Название",
+    "Adult": "Взрослый",
+    "Genres": "Жанры",
+    "Overview": "Краткое описание о фильме",
+    "Poster_path": "Ссылка на изображение",
+    "ReleaseDate": "Дата выхода",
+    "Duration": "Длительность"
   },
   "$vuetify": {
     "input": {
