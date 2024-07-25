@@ -3,7 +3,7 @@
     <div class="">
       <div class="t-flex t-gap-10">
         <div class="t-min-w-[650px] t-w-full">
-          <img src="public/images/Стражи.jpg" alt="" />
+          <!-- <img src="public/images/Стражи.jpg" alt="" /> -->
         </div>
         <div class="t-flex t-flex-col t-gap-8">
           <div>
