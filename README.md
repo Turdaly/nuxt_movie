@@ -72,4 +72,5 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Google Lighthouse.
+https://pagespeed.web.dev/analysis/https-nuxt-movie-rose-vercel-app/2e8tqawhvk?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=ru&utm_source=lh-chrome-ext
