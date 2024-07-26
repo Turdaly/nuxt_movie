@@ -99,30 +99,61 @@ declare global {
       id: number;
       results: IVideo[];
     }
-  }
-  interface IAuthorDetails {
-    name: string;
-    username: string;
-    avatar_path: string | null;
-    rating: number | null;
-  }
+    interface IAuthorDetails {
+      name: string;
+      username: string;
+      avatar_path: string | null;
+      rating: number | null;
+    }
 
-  interface IReview {
-    author: string;
-    author_details: IAuthorDetails;
-    content: string;
-    created_at: string;
-    id: string;
-    updated_at: string;
-    url: string;
-  }
+    interface IReview {
+      author: string;
+      author_details: IAuthorDetails;
+      content: string;
+      created_at: string;
+      id: string;
+      updated_at: string;
+      url: string;
+    }
 
-  interface IReviews {
-    id: number;
-    page: number;
-    results: IReview[];
-    total_pages: number;
-    total_results: number;
+    interface IReviews {
+      id: number;
+      page: number;
+      results: IReview[];
+      total_pages: number;
+      total_results: number;
+    }
+    // Credits
+    interface CastMember {
+      cast_id: number;
+      character: string;
+      credit_id: string;
+      gender: number;
+      id: number;
+      name: string;
+      order: number;
+      profile_path: string | null;
+    }
+
+    interface CrewMember {
+      credit_id: string;
+      department: string;
+      gender: number;
+      id: number;
+      job: string;
+      known_for_department: string;
+      name: string;
+      original_name: string;
+      popularity: number;
+      profile_path: string | null;
+      adult: boolean;
+    }
+
+    interface MovieCredits {
+      id: number;
+      cast: CastMember[];
+      crew: CrewMember[];
+    }
   }
 }
 

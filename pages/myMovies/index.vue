@@ -74,7 +74,7 @@
           <v-select
             v-model="currMovie.genres"
             :rules="[rules.requiredArray]"
-            :label="$t('titles.Ganres')"
+            :label="$t('titles.Genres')"
             :items="moviesStore.genresList"
             clearable
             multiple

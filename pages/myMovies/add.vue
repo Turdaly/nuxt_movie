@@ -22,7 +22,7 @@
         <v-select
           v-model="genres"
           :rules="[rules.requiredArray]"
-          :label="$t('titles.Ganres')"
+          :label="$t('titles.Genres')"
           :items="moviesStore.genresList"
           clearable
           multiple
@@ -74,7 +74,7 @@
         />
         <v-btn
           type="submit"
-          
+
           :text="`${$t('textButton.AddMovie')}`"
           bg-color="#21242d"
           base-color="#A0B3D8"

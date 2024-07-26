@@ -56,12 +56,11 @@
 </template>
 
 <script lang="ts" setup>
-import type { IMoviesList } from "~/types";
 import { useMoviesStore } from '~/stores/movies'
 const movieStore = useMoviesStore()
 
 defineProps<{
-  moviesList: IMoviesList | null;
+  moviesList: Types.IMoviesList | null;
 }>();
 
 const {

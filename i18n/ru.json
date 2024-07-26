@@ -48,13 +48,15 @@
     "Movie_Premieres": "Премьеры фильмов",
     "The_best_movies": "Лучшие фильмы",
     "Reviews": "Отзывы",
-    "Ganres": "Жанры",
+    "Genres": "Жанры",
     "Interested":"Возможно, тебя заинтересует",
 
     "PopularAnimes": "Популярные аниме",
     "AlsoWatchingAnime": "С анимем {anime_name} смотрят",
     "Anime_Premieres": "Премьеры аниме",
-    "The_best_anime": "Лучшие аниме"
+    "The_best_anime": "Лучшие аниме",
+
+    "Snackbar": "Фильм успешно добавлен в раздел избранное"
   },
   "textButton": {
     "WatchAll": "Посмотреть все",
@@ -76,7 +78,7 @@
     "Entertainment": "Развлекательные",
     "Childish": "Детские"
   },
-  "ganres": {
+  "genres": {
     "Fighters":"Боевики",
     "Westerns":"Вестерны",
     "Military":"Военные",
@@ -105,6 +107,9 @@
     "Poster_path": "Ссылка на изображение",
     "ReleaseDate": "Дата выхода",
     "Duration": "Длительность"
+  },
+  "messages": {
+    "Review": "Пока нет отзывов"
   },
   "$vuetify": {
     "input": {

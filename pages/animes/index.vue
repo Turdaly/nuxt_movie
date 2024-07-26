@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="t-flex t-flex-col t-gap-6">
-      
+
       <div
         class="t-flex t-gap-4 t-bg-custom-dark2 t-p-4 lg:t-hidden t-font-medium"
       >
@@ -33,7 +33,7 @@
       <div class="t-bg-custom-dark2 t-p-4">
         <div class="t-flex t-gap-4 t-justify-between t-flex-col md:t-flex-row">
           <v-select
-            :label="$t('titles.Ganres')"
+            :label="$t('titles.Genres')"
             :items="[
               'California',
               'Colorado',
@@ -116,8 +116,8 @@
         </div>
       </div>
       <div>
-        <h2 class="t-text-2xl t-font-bold">{{ $t("titles.Ganres") }}</h2>
-        <SliderGanre />
+        <h2 class="t-text-2xl t-font-bold">{{ $t("titles.Genres") }}</h2>
+        <SliderGenre />
       </div>
       <div class="t-overflow-x-auto custom-scrollbar">
         <NuxtLink to="">

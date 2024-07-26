@@ -10,21 +10,22 @@ export const useMoviesStore = defineStore("movies", () => {
   const detailMovie = ref<Types.IDetailMovie | null>(null);
   const recommendedMovies = ref<Types.IMoviesList | null>(null);
   const videosMovie = ref<Types.IVideolist | null>(null);
-  const reviews = ref<IReviews | null>(null);
+  const reviews = ref<Types.IReviews | null>(null);
   const query = ref<string>("");
   const searchMovies = ref<Types.IMoviesList | null>(null);
   const favoriteMovies = ref<Types.IMoviesList | null>(null);
+  const credits = ref<Types.MovieCredits | null>(null)
   const trailerLink = ref<string>('')
   const { locale } = useI18n();
   const { t } = useI18n();
   const genresList = [
-    t("ganres.Fantasy"),
-    t("ganres.Adventures"),
-    t("ganres.Cartoons"),
-    t("ganres.Dramas"),
-    t("ganres.Family"),
-    t("ganres.Horror"),
-    t("ganres.Fighters"),
+    t("genres.Fantasy"),
+    t("genres.Adventures"),
+    t("genres.Cartoons"),
+    t("genres.Dramas"),
+    t("genres.Family"),
+    t("genres.Horror"),
+    t("genres.Fighters"),
   ];
   const setMovieId = () => {
     if (typeof route.params.id == "string") {
@@ -82,7 +83,7 @@ export const useMoviesStore = defineStore("movies", () => {
       "recommended-movies"
     );
   const fetchReviewsMovie = async () =>
-    await fetchMoviesList<IReviews>(
+    await fetchMoviesList<Types.IReviews>(
       `movie/${movieId.value}/reviews`,
       reviews,
       "reviews"
@@ -107,6 +108,9 @@ export const useMoviesStore = defineStore("movies", () => {
       "detail-movie"
     );
   };
+
+  const fetchCreditsMovie = async () => await fetchMoviesList<Types.MovieCredits>(`/movie/${movieId.value}/credits`, credits, 'credits:')
+
   const fetchFavoriteMovies = async () =>
     await fetchMoviesList<Types.IMoviesList>(
       `/account/${movieId.value}/favorite/movies`,
@@ -165,6 +169,7 @@ export const useMoviesStore = defineStore("movies", () => {
     detailMovie,
     recommendedMovies,
     videosMovie,
+    credits,
     reviews,
     query,
     searchMovies,
@@ -182,6 +187,7 @@ export const useMoviesStore = defineStore("movies", () => {
     fetchVideosMovie,
     fetchReviewsMovie,
     fetchSearchMovies,
+    fetchCreditsMovie,
     fetchFavoriteMovies,
     addFavoriteMovie,
     deleteMovie,

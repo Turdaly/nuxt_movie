@@ -54,13 +54,15 @@
     "Movie_Premieres": "Movie premieres",
     "The_best_movies": "The best films",
     "Reviews": "Reviews",
-    "Ganres": "Ganres",
+    "Genres": "Genres",
     "Interested":"You might be interested in",
 
     "PopularAnimes": "Popular animes",
     "AlsoWatchingAnime": "They are watching the animes {anime_name}",
     "Anime_Premieres": "Anime premieres",
-    "The_best_anime": "The best animes"
+    "The_best_anime": "The best animes",
+
+    "Snackbar": "The movie has been successfully added to the favorite section"
   },
   "input": {
     "Placeholder": "Search"
@@ -74,7 +76,7 @@
     "Entertainment": "Entertainment",
     "Childish": "Childish"
   },
-  "ganres": {
+  "genres": {
     "Fighters":"Fighters",
     "Westerns":"Westerns",
     "Military":"Military",
@@ -103,6 +105,9 @@
     "Poster_path": "Image url",
     "ReleaseDate": "Release date",
     "Duration": "Duration"
+  },
+  "messages": {
+    "Review": "There are no reviews yet"
   },
   "$vuetify": {
     "input": {

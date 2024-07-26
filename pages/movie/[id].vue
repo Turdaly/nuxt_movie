@@ -19,7 +19,7 @@
           :src="`${videoBaseURL}/${moviesStore.trailerLink}`"
         >
         </iframe>
-        <div class="t-flex t-flex-col t-gap-8 t-w-[441px] md:t-w-full">
+        <div class="t-flex t-flex-col t-gap-8 t-items-center lg:t-items-stretch md:t-w-full">
           <div>
             <h1 class="t-text-6xl t-truncate t-text-wrap t-text-center">
               {{ moviesStore.detailMovie.title }}
@@ -30,12 +30,12 @@
               <li>
                 {{ moviesStore.detailMovie.release_date.slice(0, 4) }}
               </li>
-              <li>
-                {{ moviesStore.detailMovie.runtime }} мин
-              </li>
+              <li>{{ moviesStore.detailMovie.runtime }} мин</li>
             </ul>
             <ul class="t-flex t-items-center t-gap-6">
-              <li>{{ moviesStore.detailMovie.production_countries[0].name}}</li>
+              <li>
+                {{ moviesStore.detailMovie.production_countries[0].name }}
+              </li>
               <li
                 v-for="genres in moviesStore.detailMovie.genres"
                 :key="genres.id"
@@ -47,7 +47,7 @@
           <div class="t-flex t-items-center t-gap-8">
             <Avatar v-for="n in 5" />
           </div>
-          <div>
+          <div class="t-flex t-flex-col t-items-center lg:t-items-stretch">
             <div class="t-flex t-items-center t-gap-4">
               <v-btn rounded="lg" color="#21242D" height="48" width="305">
                 {{ $t("textButton.Trailer") }}
@@ -60,7 +60,8 @@
                   moviesStore.addFavoriteMovie(
                     21383668,
                     parseInt($route.params.id.toString())
-                  )
+                  );
+                  toggleSnackbar();
                 "
               >
               </v-btn>
@@ -92,7 +93,7 @@
           <div
             class="t-flex t-gap-6 t-mb-12 t-overflow-x-auto custom-scrollbar"
           >
-            <div v-for="n in 9" class="t-mb-6">
+            <div class="t-mb-6">
               <Actor />
             </div>
             <v-btn
@@ -112,20 +113,29 @@
           <Review />
         </div>
       </div>
+      <v-snackbar v-model="snackbar" :timeout="2500" color="#21242D">
+        <p class="t-text-green-400">{{ $t("titles.Snackbar") }}</p>
+      </v-snackbar>
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
 import { useMoviesStore } from "~/stores/movies";
+
 const moviesStore = useMoviesStore();
 const { t } = useI18n();
 const route = useRoute();
 
-const items = [{ title: t("header.Movies") }, { title: t("ganre.Fiction") }];
+const snackbar = ref<boolean>(false);
+const items = [{ title: t("header.Movies") }, { title: t("genres.Fiction") }];
 const {
   public: { videoBaseURL },
 } = useRuntimeConfig();
+
+const toggleSnackbar = () => {
+  snackbar.value = true;
+};
 
 const onInit = async () => {
   if (
@@ -140,7 +150,9 @@ onMounted(async () => {
     moviesStore.fetchDetailMovie(),
     moviesStore.fetchRecommendedMovies(),
     moviesStore.fetchReviewsMovie(),
-    moviesStore.fetchVideosMovie()
+    moviesStore.fetchVideosMovie(),
+    moviesStore.fetchCreditsMovie()
   ]);
+  console.log(moviesStore.credits)
 });
 </script>

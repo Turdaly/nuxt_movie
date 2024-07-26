@@ -14,13 +14,13 @@
         </v-breadcrumbs>
       </div>
       <div>
-        <h1 class="t-text-4xl t-font-bold t-mb-1">{{ $t("header.Movies") }}: {{ $t("ganre.Melodramas") }} </h1>
-        <p class="t-text-gray-400 ">{{ ganre }}, {{ country }}, {{ year }}</p>
+        <h1 class="t-text-4xl t-font-bold t-mb-1">{{ $t("header.Movies") }}: {{ $t("genres.Melodramas") }} </h1>
+        <p class="t-text-gray-400 ">{{ genre }}, {{ country }}, {{ year }}</p>
       </div>
       <div class="t-w-full t-bg-custom-dark2 t-h-48 t-p-4">
         <div class="t-flex t-gap-4">
           <v-select
-            :label="$t('titles.Ganres')"
+            :label="$t('titles.Genres')"
             :items="[
               'California',
               'Colorado',
@@ -98,10 +98,10 @@ const { t } = useI18n();
 const items = [
   { title: () => t("sidebar.Menu.Home"), href: '/' },
   { title: () => t("header.Movies"), href: "/movies" },
-  { title: () => t("ganre.Melodramas"), href: '/movies/melodramas' },
+  { title: () => t("genres.Melodramas"), href: '/movies/melodramas' },
 ];
 
-const ganre = ref<String>(t("ganre.Melodramas"))
+const genre = ref<String>(t("genres.Melodramas"))
 const country = ref<String>('Все страны')
 const year = ref<String>('Все годы')
 
