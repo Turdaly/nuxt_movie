@@ -71,6 +71,26 @@ yarn preview
 # bun
 bun run preview
 ```
+# 🎬 Tyni Moviez
 
-## Google Lighthouse.
-https://pagespeed.web.dev/analysis/https-nuxt-movie-rose-vercel-app/2e8tqawhvk?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=ru&utm_source=lh-chrome-ext
+Tyni Moviez is a simple and elegant movie search and management app that lets users explore a vast collection of movies, create a Favorites list, and even upload their own movies. This project is built using modern frontend technologies for a smooth user experience.
+
+## 🚀 Technologies Used
+
+- **[TheMovieDatabase API (TMDB)](https://www.themoviedb.org/documentation/api)**: For fetching movie data
+- **Vue 3**: Progressive JavaScript framework for building the user interface
+- **Nuxt 3**: Meta-framework built on top of Vue for a powerful and efficient app
+- **TypeScript**: Static type checking for more predictable and maintainable code
+- **Pinia**: State management for Vue.js
+
+## 📱 Features
+
+- 🔍 **Search Movies**: Find movies from an extensive collection powered by TMDB API
+- ⭐ **Favorites Collection**: Add movies to your personal favorites collection for easy access
+- 🎥 **Upload & Manage Movies**: Upload your own movies and manage them seamlessly
+
+## 🛠️ Project Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/Tyni-Moviez.git
