@@ -43,6 +43,9 @@ const moviesStore = useMoviesStore();
 const {
   public: { imageBaseURL },
 } = useRuntimeConfig();
+
+onMounted( async () => {
+  await moviesStore.fetchFavoriteMovies()
+})
 </script>
 
-<style scoped></style>

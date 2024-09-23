@@ -23,7 +23,8 @@
       "Home": "Домой",
       "Discover": "Узнать",
       "Awards": "Награды",
-      "Profile": "Профиль"
+      "Profile": "Профиль",
+      "Nothing": "Нет"
     },
     "Library": {
       "Recent": "Недавний",
@@ -32,7 +33,6 @@
       "Playlist": "Плейлист",
       "Watchlist": "Смотреть позже",
       "MyMovies": "Мои фильмы"
-
     },
     "General": {
       "Settings": "Настройки",
@@ -49,7 +49,7 @@
     "The_best_movies": "Лучшие фильмы",
     "Reviews": "Отзывы",
     "Genres": "Жанры",
-    "Interested":"Возможно, тебя заинтересует",
+    "Interested": "Возможно, тебя заинтересует",
 
     "PopularAnimes": "Популярные аниме",
     "AlsoWatchingAnime": "С анимем {anime_name} смотрят",
@@ -64,6 +64,8 @@
     "WatchNow": "Смотреть сейчас",
     "Trailer": "Трейлер",
     "AddMovie": "Добавить фильм",
+    "Save": "Сохранить",
+    "Cancel": "Отмена",
     "Also": "Еще"
   },
   "input": {
@@ -79,25 +81,25 @@
     "Childish": "Детские"
   },
   "genres": {
-    "Fighters":"Боевики",
-    "Westerns":"Вестерны",
-    "Military":"Военные",
-    "Detectives":"Детективы",
-    "Children's":"Детские",
-    "Documents":"Документы",
-    "Dramas":"Драмы",
-    "Historical":"Исторические",
-    "Comedies":"Комедии",
-    "Crime":"Криминал",
-    "Melodramas":"Мелодрамы",
-    "Cartoons":"Мультфильмы",
-    "Adventures":"Приключения",
-    "Family":"Семейные",
-    "Sports":"Спортивные",
-    "Thrillers":"Триллеры",
-    "Horror":"Ужасы",
-    "Fiction":"Фантастика",
-    "Fantasy":"Фэнтези"
+    "Fighters": "Боевики",
+    "Westerns": "Вестерны",
+    "Military": "Военные",
+    "Detectives": "Детективы",
+    "Children's": "Детские",
+    "Documents": "Документы",
+    "Dramas": "Драмы",
+    "Historical": "Исторические",
+    "Comedies": "Комедии",
+    "Crime": "Криминал",
+    "Melodramas": "Мелодрамы",
+    "Cartoons": "Мультфильмы",
+    "Adventures": "Приключения",
+    "Family": "Семейные",
+    "Sports": "Спортивные",
+    "Thrillers": "Триллеры",
+    "Horror": "Ужасы",
+    "Fiction": "Фантастика",
+    "Fantasy": "Фэнтези"
   },
   "form": {
     "Title": "Название",

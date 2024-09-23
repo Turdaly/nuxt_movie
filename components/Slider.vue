@@ -28,9 +28,7 @@
             </p>
           </NuxtLink>
         </v-slide-group-item>
-        <v-slide-group-item
-          v-slot="{toggle }"
-        >
+        <v-slide-group-item v-slot="{ toggle }">
           <NuxtLink
             :to="{ name: 'movie-id', params: { id: 1 } }"
             class="t-w-[170px] t-mr-8 t-group"
@@ -43,11 +41,12 @@
               width="170"
               @click="toggle"
             >
-              <v-card-text class="t-flex t-items-center t-justify-center t-h-full t-font-bold">
-                {{ $t('textButton.WatchAll') }}
+              <v-card-text
+                class="t-flex t-items-center t-justify-center t-h-full t-font-bold"
+              >
+                {{ $t("textButton.WatchAll") }}
               </v-card-text>
             </v-card>
-
           </NuxtLink>
         </v-slide-group-item>
       </v-slide-group>
@@ -56,8 +55,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useMoviesStore } from '~/stores/movies'
-const movieStore = useMoviesStore()
+import { useMoviesStore } from "~/stores/movies";
+const movieStore = useMoviesStore();
 
 defineProps<{
   moviesList: Types.IMoviesList | null;

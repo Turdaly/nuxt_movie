@@ -28,7 +28,8 @@
 const { t } = useI18n();
 
 const items = [
-  { title: (() => t("sidebar.Menu.Home")) },
-  { title: (() => t("header.TVShows")) },
+  { title: () => t("sidebar.Menu.Home") },
+  { title: () => t("header.TVShows") },
 ];
+
 </script>

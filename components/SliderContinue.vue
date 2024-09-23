@@ -1,17 +1,8 @@
 <template>
-  <v-sheet
-    color="#16181E"
-  >
-    <v-slide-group
-      class="pa-4"
-      show-arrows
-    >
-      <v-slide-group-item
-        v-for="n in 15"
-        :key="n"
-        v-slot="{ toggle }"
-      >
-        <NuxtLink :to="{ name: 'movie-id', params: { id: 1}}">
+  <v-sheet color="#16181E">
+    <v-slide-group class="pa-4" show-arrows>
+      <v-slide-group-item v-for="n in 15" :key="n" v-slot="{ toggle }">
+        <NuxtLink :to="{ name: 'movie-id', params: { id: 1 } }">
           <v-card
             :class="['ma-4']"
             color="#21242d"

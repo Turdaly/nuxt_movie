@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 export const useMoviesStore = defineStore("movies", () => {
   const route = useRoute();
   const movieId = ref<string | null>(null);
-  const myMovies = ref<Types.IDetailMovie[] | null>(null)
+  const myMovies = ref<Types.IDetailMovie[] | null>(null);
   const popularMovies = ref<Types.IMoviesList | null>(null);
   const upcomingMovies = ref<Types.IMoviesList | null>(null);
   const topMovies = ref<Types.IMoviesList | null>(null);
@@ -14,8 +14,8 @@ export const useMoviesStore = defineStore("movies", () => {
   const query = ref<string>("");
   const searchMovies = ref<Types.IMoviesList | null>(null);
   const favoriteMovies = ref<Types.IMoviesList | null>(null);
-  const credits = ref<Types.MovieCredits | null>(null)
-  const trailerLink = ref<string>('')
+  const credits = ref<Types.MovieCredits | null>(null);
+  const trailerLink = ref<string>("");
   const { locale } = useI18n();
   const { t } = useI18n();
   const genresList = [
@@ -89,10 +89,16 @@ export const useMoviesStore = defineStore("movies", () => {
       "reviews"
     );
   const fetchVideosMovie = async () => {
-    await fetchMoviesList<Types.IVideolist>(`movie/${movieId.value}/videos`, videosMovie, "videos");
-    const trailer = videosMovie.value?.results.find(video => video.type === "Trailer")
-    trailerLink.value = trailer ? trailer.key : ''
-   }
+    await fetchMoviesList<Types.IVideolist>(
+      `movie/${movieId.value}/videos`,
+      videosMovie,
+      "videos"
+    );
+    const trailer = videosMovie.value?.results.find(
+      (video) => video.type === "Trailer"
+    );
+    trailerLink.value = trailer ? trailer.key : "";
+  };
 
   const fetchSearchMovies = async () =>
     await fetchMoviesList<Types.IMoviesList>(
@@ -109,7 +115,12 @@ export const useMoviesStore = defineStore("movies", () => {
     );
   };
 
-  const fetchCreditsMovie = async () => await fetchMoviesList<Types.MovieCredits>(`/movie/${movieId.value}/credits`, credits, 'credits:')
+  const fetchCreditsMovie = async () =>
+    await fetchMoviesList<Types.MovieCredits>(
+      `/movie/${movieId.value}/credits`,
+      credits,
+      "credits:"
+    );
 
   const fetchFavoriteMovies = async () =>
     await fetchMoviesList<Types.IMoviesList>(
@@ -134,31 +145,31 @@ export const useMoviesStore = defineStore("movies", () => {
 
   const fetchMyMovies = async () => {
     try {
-      const { $apiCustom } = useNuxtApp()
-      const response = await $apiCustom.get<Types.IDetailMovie[]>('/myMovies')
-      myMovies.value = response.data
-    } catch(err) {
-      console.log(err)
+      const { $apiCustom } = useNuxtApp();
+      const response = await $apiCustom.get<Types.IDetailMovie[]>("/myMovies");
+      myMovies.value = response.data;
+    } catch (err) {
+      console.log(err);
     }
-  }
+  };
   const deleteMovie = async (movie: Types.IDetailMovie) => {
     try {
-      const { $apiCustom } = useNuxtApp()
-      await $apiCustom.delete(`/myMovies/${movie.id}`)
-      await fetchMyMovies()
-    } catch(err) {
-      console.log(err)
+      const { $apiCustom } = useNuxtApp();
+      await $apiCustom.delete(`/myMovies/${movie.id}`);
+      await fetchMyMovies();
+    } catch (err) {
+      console.log(err);
     }
-  }
+  };
   const patchMovie = async (movie: Types.IDetailMovie) => {
     try {
-      const { $apiCustom } = useNuxtApp()
-      await $apiCustom.patch(`/myMovies/${movie.id}`, movie)
-      await fetchMyMovies()
-    } catch(err) {
-      console.log(err)
+      const { $apiCustom } = useNuxtApp();
+      await $apiCustom.patch(`/myMovies/${movie.id}`, movie);
+      await fetchMyMovies();
+    } catch (err) {
+      console.log(err);
     }
-  }
+  };
 
   return {
     movieId,

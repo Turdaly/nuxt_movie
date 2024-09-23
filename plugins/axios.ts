@@ -12,10 +12,10 @@ export default defineNuxtPlugin((nuxtApp) => {
   });
   const apiCustom: AxiosInstance = axios.create({
     baseURL: "https://41d702835d3daeea.mokky.dev",
-    "headers": {
-      "accept": "application/json",
+    headers: {
+      accept: "application/json",
     },
-  })
+  });
   nuxtApp.provide("apiMovie", apiMovie);
   nuxtApp.provide("apiCustom", apiCustom);
 });

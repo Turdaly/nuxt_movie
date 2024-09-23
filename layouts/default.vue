@@ -19,13 +19,16 @@
                 <NuxtLink to="/">{{ $t("sidebar.Menu.Home") }} </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/">{{ $t("sidebar.Menu.Discover") }} </NuxtLink>
+                <!-- <NuxtLink to="/">{{ $t("sidebar.Menu.Discover") }} </NuxtLink> -->
+                <NuxtLink to="/">{{ $t("sidebar.Menu.Nothing") }}</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/">{{ $t("sidebar.Menu.Awards") }}</NuxtLink>
+                <!-- <NuxtLink to="/">{{ $t("sidebar.Menu.Awards") }}</NuxtLink> -->
+                <NuxtLink to="/">{{ $t("sidebar.Menu.Nothing") }}</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/">{{ $t("sidebar.Menu.Profile") }}</NuxtLink>
+                <NuxtLink to="/">{{ $t("sidebar.Menu.Nothing") }}</NuxtLink>
+                <!-- <NuxtLink to="/">{{ $t("sidebar.Menu.Profile") }}</NuxtLink> -->
               </li>
             </ul>
           </div>
@@ -35,15 +38,18 @@
             </p>
             <ul class="t-flex t-flex-col t-gap-3">
               <li>
-                <NuxtLink to="/">{{ $t("sidebar.Library.Recent") }}</NuxtLink>
+                <!-- <NuxtLink to="/">{{ $t("sidebar.Library.Recent") }}</NuxtLink> -->
+                <NuxtLink to="/">{{ $t("sidebar.Menu.Nothing") }}</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/">{{ $t("sidebar.Library.TopRated") }}</NuxtLink>
+                <!-- <NuxtLink to="/">{{ $t("sidebar.Library.TopRated") }}</NuxtLink> -->
+                <NuxtLink to="/">{{ $t("sidebar.Menu.Nothing") }}</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/">{{ $t("sidebar.Library.Playlist") }}</NuxtLink>
+                <!-- <NuxtLink to="/">{{ $t("sidebar.Library.Playlist") }}</NuxtLink> -->
+                <NuxtLink to="/">{{ $t("sidebar.Menu.Nothing") }}</NuxtLink>
               </li>
-              <li @click="moviesStore.fetchFavoriteMovies()">
+              <li>
                 <NuxtLink :to="{ name: 'profile-favorites' }">{{
                   $t("sidebar.Library.Favorite")
                 }}</NuxtLink>
@@ -63,10 +69,12 @@
         </p>
         <ul class="t-flex t-flex-col t-gap-3">
           <li>
-            <NuxtLink to="/">{{ $t("sidebar.General.Settings") }}</NuxtLink>
+            <!-- <NuxtLink to="/">{{ $t("sidebar.General.Settings") }}</NuxtLink> -->
+            <NuxtLink to="/">{{ $t("sidebar.Menu.Nothing") }}</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/">{{ $t("sidebar.General.LogOut") }}</NuxtLink>
+            <!-- <NuxtLink to="/">{{ $t("sidebar.General.LogOut") }}</NuxtLink> -->
+            <NuxtLink to="/">{{ $t("sidebar.Menu.Nothing") }}</NuxtLink>
           </li>
         </ul>
       </div>
@@ -84,7 +92,7 @@
               <NuxtLink to="/tvshows">{{ $t("header.TVShows") }}</NuxtLink>
             </li>
             <li class="t-text-xl link">
-              <NuxtLink to="/animes">{{ $t("header.Animes") }}</NuxtLink>
+              <!-- <NuxtLink to="/animes">{{ $t("header.Animes") }}</NuxtLink> -->
             </li>
             <div>
               <v-text-field

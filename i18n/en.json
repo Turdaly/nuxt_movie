@@ -22,7 +22,8 @@
       "Home": "Home",
       "Discover": "Discover",
       "Awards": "Awards",
-      "Profile": "Profile"
+      "Profile": "Profile",
+      "Nothing": "Not"
     },
     "Library": {
       "Recent": "Recent",
@@ -43,6 +44,8 @@
     "WatchNow": "Watch Now",
     "Trailer": "Trailer",
     "AddMovie": "Add movie",
+    "Save": "Save",
+    "Cancel": "Cancel",
     "Also": "Also"
   },
   "titles": {
@@ -55,7 +58,7 @@
     "The_best_movies": "The best films",
     "Reviews": "Reviews",
     "Genres": "Genres",
-    "Interested":"You might be interested in",
+    "Interested": "You might be interested in",
 
     "PopularAnimes": "Popular animes",
     "AlsoWatchingAnime": "They are watching the animes {anime_name}",
@@ -77,25 +80,25 @@
     "Childish": "Childish"
   },
   "genres": {
-    "Fighters":"Fighters",
-    "Westerns":"Westerns",
-    "Military":"Military",
-    "Detectives":"Detectives",
-    "Children's":"Children's",
-    "Documents":"Documents",
-    "Dramas":"Dramas",
-    "Historical":"Historical",
-    "Comedies":"Comedies",
-    "Crime":"Crime",
-    "Melodramas":"Melodramas",
-    "Cartoons":"Cartoons",
-    "Adventures":"Adventures",
-    "Family":"Family",
-    "Sports":"Sports",
-    "Thrillers":"Thrillers",
-    "Horror":"Horror",
-    "Fiction":"Fiction",
-    "Fantasy":"Fantasy"
+    "Fighters": "Fighters",
+    "Westerns": "Westerns",
+    "Military": "Military",
+    "Detectives": "Detectives",
+    "Children's": "Children's",
+    "Documents": "Documents",
+    "Dramas": "Dramas",
+    "Historical": "Historical",
+    "Comedies": "Comedies",
+    "Crime": "Crime",
+    "Melodramas": "Melodramas",
+    "Cartoons": "Cartoons",
+    "Adventures": "Adventures",
+    "Family": "Family",
+    "Sports": "Sports",
+    "Thrillers": "Thrillers",
+    "Horror": "Horror",
+    "Fiction": "Fiction",
+    "Fantasy": "Fantasy"
   },
   "form": {
     "Title": "Title",

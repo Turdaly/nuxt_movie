@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="t-overflow-y-auto">
     <h1 class="t-text-4xl t-font-bold">{{ $t("sidebar.Library.MyMovies") }}</h1>
     <div class="t-mt-12 t-mb-12">
       <div class="t-flex t-flex-wrap t-gap-6 t-mt-6">
@@ -43,9 +43,9 @@
     </div>
     <div
       v-if="isEditModalOpen"
-      class="t-fixed t-inset-0 t-z-10 t-bg-black t-bg-opacity-50"
+      class="t-fixed t-inset-0 t-z-10 t-bg-black t-bg-opacity-50 t-overflow-y-auto"
     >
-      <div class="t-bg-custom-dark2 t-max-w-3xl t-mx-auto t-my-8 t-rounded-xl">
+      <div class="t-bg-custom-dark2 t-max-w-3xl t-mx-auto t-my-8 t-rounded-xl t-overflow-y-auto">
         <div class="t-flex t-justify-between t-py-4 t-px-6 t-border-b">
           <NuxtLink
             class="t-flex t-items-center t-gap-2"
@@ -126,14 +126,14 @@
           />
 
           <div class="t-flex t-justify-end t-gap-2">
-            <v-btn color="#32353d" @click="closeEditModal">Отмена</v-btn>
+            <v-btn color="#32353d" @click="closeEditModal">{{ $t('textButton.Cancel') }}</v-btn>
             <v-btn
               color="#32353d"
               @click="
                 saveMovie()
                 closeEditModal();
               "
-              >Сохранить</v-btn
+              >{{ $t('textButton.Save') }}</v-btn
             >
           </div>
         </div>

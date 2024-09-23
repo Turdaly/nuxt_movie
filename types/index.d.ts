@@ -1,6 +1,11 @@
-
 declare global {
   namespace Types {
+    interface IChanel {
+      id: number,
+      title: string,
+      type: string,
+      link: string
+    }
     // MoviesList
     interface IMovie {
       adult: boolean;

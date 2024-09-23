@@ -18,12 +18,12 @@
               width="248"
               color="white"
             >
-              {{ $t('textButton.Watchlist') }}
+              {{ $t("textButton.Watchlist") }}
             </v-btn>
           </div>
           <div class="t-absolute t-bottom-6 t-right-4">
             <v-btn color="#00B9AE" rounded="lg" height="64" width="248">
-              {{ $t('textButton.WatchNow') }}
+              {{ $t("textButton.WatchNow") }}
             </v-btn>
           </div>
         </div>
