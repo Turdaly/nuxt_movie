@@ -5,10 +5,12 @@ Tyni Moviez is a simple and elegant movie search and management app that lets us
 ## 🚀 Technologies Used
 
 - **[TheMovieDatabase API (TMDB)](https://www.themoviedb.org/documentation/api)**: For fetching movie data
-- **Vue 3**: Progressive JavaScript framework for building the user interface
-- **Nuxt 3**: Meta-framework built on top of Vue for a powerful and efficient app
-- **TypeScript**: Static type checking for more predictable and maintainable code
-- **Pinia**: State management for Vue.js
+- **Vue 3**: Modern JavaScript framework for building the user interface
+- **Nuxt 3**: Robust framework for efficient app development
+- **Pinia**: State management for managing the application's state
+- **Vuetify**: Material design component framework for building a responsive and clean UI
+- **TypeScript**: Ensures type safety and maintainable code
+- **Tailwind CSS**: Utility-first CSS framework for fast and responsive design
 
 ## 📱 Features
 
