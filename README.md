@@ -22,7 +22,7 @@ Tyni Moviez is a simple and elegant movie search and management app that lets us
    ```bash
    git clone https://github.com/your-repo/Tyni-Moviez.git
    
-# Nuxt 3 Minimal Starter
+## Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
